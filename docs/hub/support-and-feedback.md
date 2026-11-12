@@ -18,6 +18,10 @@ Umbraco Backoffice, and shows what has already been raised from this installatio
 Your previous submissions are listed on the same page, so you can see whether something has already been raised
 from this installation before sending a duplicate.
 
+## Screenshots
+
+![The Support view for reporting a bug, requesting a feature or sending feedback](../assets/hub/support.png)
+
 ## Connected and unconnected installations
 
 | | Connected account | No account |

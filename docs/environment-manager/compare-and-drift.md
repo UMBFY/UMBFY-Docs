@@ -5,11 +5,19 @@ detects drift against what you expected.
 
 **When to use it.** Before planning any promotion, and as a routine check that environments have not diverged.
 
-**Where to find it.** **Environment Manager → Compare**.
+**Where to find it.** **Environment Manager → Sync & Deploy**, step **2. Compare**. An environment card on
+**Overview** or **Environments** also has a **Compare** action.
 
 **Required permissions.** The Environment Manager section.
 
 **Edition.** Free — snapshots, compare and basic drift need no licence.
+
+## Screenshots
+
+![Sync & Deploy step 2, Compare Environments: choose Source and Target, then compare their latest snapshots](../assets/environment-manager/sync-deploy.png)
+
+Comparison is read-only — the screen states that it never changes Source or Target — and the planner blocks
+selecting the same environment on both sides.
 
 ## What is compared
 
@@ -24,7 +32,7 @@ detects drift against what you expected.
 
 ## Step-by-step
 
-1. Open **Environment Manager → Compare**.
+1. Open **Environment Manager → Sync & Deploy**.
 2. Choose the **source** environment and the **destination** environment.
 3. Run the comparison. Both ends are snapshotted.
 4. Read the differences before selecting anything.

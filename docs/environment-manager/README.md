@@ -40,6 +40,13 @@
   </a>
 </div>
 
+## Screenshots
+
+![The Environment Manager Overview: environment and operation counts, a Needs Attention tile, configured environments and recent activity](../assets/environment-manager/overview.png)
+
+A fresh installation opens with **Setup is incomplete — complete the guided wizard before promoting** and an
+**Open setup** action. That is the expected first-run state, not a fault.
+
 ## What it moves
 
 Umbraco **schema**, specifically:

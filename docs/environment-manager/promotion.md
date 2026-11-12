@@ -5,11 +5,16 @@ approval gate and a recorded execution.
 
 **When to use it.** Whenever schema must move between environments in a way you can audit afterwards.
 
-**Where to find it.** **Environment Manager → Compare**, then the plan and deployment views.
+**Where to find it.** **Environment Manager → Sync & Deploy**, which walks the whole flow in four steps:
+**1. Select**, **2. Compare**, **3. Review**, **4. Deploy**. History is under **Activity**.
 
 **Required permissions.** The Environment Manager section. Approving a plan is a deliberate, recorded act.
 
 **Edition.** Professional and above.
+
+## Screenshots
+
+![The Sync & Deploy wizard with its four steps: 1. Select, 2. Compare, 3. Review, 4. Deploy](../assets/environment-manager/sync-deploy.png)
 
 ## Deny-by-default
 

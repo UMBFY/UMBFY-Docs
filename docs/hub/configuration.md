@@ -21,6 +21,10 @@ Environment-variable form uses the standard .NET double-underscore separator:
 UMBFY__Hub__Branding__Enabled=true
 ```
 
+## Screenshots
+
+![Hub Settings, listing each package that exposes settings alongside About this installation](../assets/hub/configuration.png)
+
 ## Branding
 
 `UMBFY:Hub:Branding:Enabled` — default **`false`**.

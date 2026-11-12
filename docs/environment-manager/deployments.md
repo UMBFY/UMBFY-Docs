@@ -6,9 +6,13 @@ anything still running.
 **When to use it.** While a run is in progress, to follow it; afterwards, to answer "what changed, when, and who
 approved it".
 
-**Where to find it.** **Environment Manager → Deployments**.
+**Where to find it.** **Environment Manager → Activity**.
 
 **Required permissions.** The Environment Manager section.
+
+## Screenshots
+
+![The Activity tab, holding deployment history and recent operations](../assets/environment-manager/activity.png)
 
 ## The list
 

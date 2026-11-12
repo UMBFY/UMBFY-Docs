@@ -36,6 +36,10 @@ leaving the new file hidden somewhere inside whatever sort was active. Configura
 Each editor's chosen sort is remembered in namespaced local storage, and per folder if
 `FolderPreferencesEnabled` is on. Set `RememberUserChoice` to `false` for one consistent behaviour across the team.
 
+## Screenshots
+
+![Media → Browse: Umbraco's own media list with the Media Order toolbar above it](../assets/media-order/browse-toolbar.png)
+
 ## Filters
 
 Filtering is a **server-side query with pagination**, not a client-side filter over the current page. You can filter

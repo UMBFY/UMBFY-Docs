@@ -15,6 +15,10 @@ decide whether the package earns its place before you pay for it.
 
 Paid capabilities require a valid signed licence, or a usable Hub-reported licence mapped to an edition.
 
+## Screenshots
+
+![Environment Manager settings, where a signed licence envelope is activated and the edition reported](../assets/environment-manager/settings.png)
+
 ## Activating a licence
 
 **Required permissions.** Backoffice **administrator**.

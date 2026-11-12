@@ -6,7 +6,8 @@ operation, instead of promoting difference by difference.
 **When to use it.** Setting up a brand-new environment — a fresh Development, Staging or disaster-recovery site —
 that should start from an existing environment's schema.
 
-**Where to find it.** **Environment Manager → Bootstrap**.
+**Where to find it.** **Environment Manager → Sync & Deploy**. Bootstrap is reached from the deploy flow rather
+than a tab of its own.
 
 **Edition.** Professional and above.
 
@@ -24,7 +25,7 @@ operation, with dependencies handled.
 1. Confirm both environments are registered and connectivity is proven — see [Environments](environments.md).
 2. Confirm the destination really is near-empty. Bootstrap is not the tool for a destination that already carries
    schema you care about.
-3. Open **Environment Manager → Bootstrap**.
+3. Open **Environment Manager → Sync & Deploy**.
 4. Choose the source environment and the destination.
 5. Review what will be established.
 6. Execute.

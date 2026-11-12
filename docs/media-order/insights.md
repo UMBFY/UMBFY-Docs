@@ -32,6 +32,10 @@ node cannot rebuild an index that spans folders they cannot see.
 Rebuild when the index has genuinely stalled, or after a bulk operation that bypassed normal save and move events,
 such as a direct database import. It is not a routine step.
 
+## Screenshots
+
+![Media → Insights: index health and rebuild, totals, type breakdown and duplicate groups](../assets/media-order/insights.png)
+
 ## What it reports
 
 | Report | Use it for |
