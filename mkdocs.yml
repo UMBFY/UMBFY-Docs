@@ -122,8 +122,15 @@ nav:
       - Installation: media-order/installation.md
       - Quick Start: media-order/quick-start.md
       - Configuration: media-order/configuration.md
-      - Sorting: media-order/sorting.md
-      - Upload Folders: media-order/upload-folders.md
+      - Sorting and Filtering: media-order/sorting.md
+      - Collections: media-order/collections.md
+      - Duplicates: media-order/duplicates.md
+      - Bulk Operations: media-order/bulk-operations.md
+      - Folder Import: media-order/upload-folders.md
+      - Replace File: media-order/replace-file.md
+      - Smart Media Picker: media-order/smart-media-picker.md
+      - Insights: media-order/insights.md
+      - Permissions: media-order/permissions.md
       - Troubleshooting: media-order/troubleshooting.md
       - FAQ: media-order/faq.md
   - Environment Manager:

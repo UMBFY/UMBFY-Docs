@@ -58,8 +58,8 @@ hide:
     <a class="umbfy-package-card" href="media-order/">
       <div class="umbfy-package-card__top"><span class="umbfy-package-number">04</span></div>
       <h3>Media Order</h3>
-      <p>More useful sorting, organization and upload workflows for the Media Library.</p>
-      <div class="umbfy-tags"><span>Sorting</span><span>Metadata</span><span>Upload folders</span></div>
+      <p>Sorting, filtering, collections, duplicates, bulk operations and folder upload for the Media library.</p>
+      <div class="umbfy-tags"><span>Collections</span><span>Duplicates</span><span>Folder import</span><span>Insights</span></div>
       <span class="umbfy-link">View documentation <b>→</b></span>
     </a>
 
