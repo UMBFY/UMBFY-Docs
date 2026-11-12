@@ -15,7 +15,7 @@ hide:
 </section>
 
 <section class="umbfy-stats" aria-label="UMBFY package documentation highlights">
-  <div><strong>3+</strong><span>Package experiences</span></div>
+  <div><strong>5</strong><span>Package experiences</span></div>
   <div><strong>17 / 18</strong><span>Umbraco versions</span></div>
   <div><strong>1</strong><span>Documentation home</span></div>
 </section>
@@ -28,9 +28,17 @@ hide:
   </div>
 
   <div class="umbfy-package-grid">
+    <a class="umbfy-package-card" href="hub/">
+      <div class="umbfy-package-card__top"><span class="umbfy-package-number">01</span></div>
+      <h3>Hub</h3>
+      <p>The shared UMBFY home in the Backoffice: what is installed, what needs attention, what has an update.</p>
+      <div class="umbfy-tags"><span>Dashboard</span><span>Packages</span><span>Account</span><span>Support</span></div>
+      <span class="umbfy-link">View documentation <b>→</b></span>
+    </a>
+
     <a class="umbfy-package-card umbfy-package-card--featured" href="content-guard/">
       <div class="umbfy-package-card__top">
-        <span class="umbfy-package-number">01</span>
+        <span class="umbfy-package-number">02</span>
         <span class="umbfy-badge">Featured</span>
       </div>
       <h3>Content Guard</h3>
@@ -40,7 +48,7 @@ hide:
     </a>
 
     <a class="umbfy-package-card" href="collaboration/">
-      <div class="umbfy-package-card__top"><span class="umbfy-package-number">02</span></div>
+      <div class="umbfy-package-card__top"><span class="umbfy-package-number">03</span></div>
       <h3>Collaboration</h3>
       <p>Realtime presence and editing awareness for Umbraco Backoffice teams.</p>
       <div class="umbfy-tags"><span>Presence</span><span>Editing awareness</span><span>Load balanced</span></div>
@@ -48,10 +56,21 @@ hide:
     </a>
 
     <a class="umbfy-package-card" href="media-order/">
-      <div class="umbfy-package-card__top"><span class="umbfy-package-number">03</span></div>
+      <div class="umbfy-package-card__top"><span class="umbfy-package-number">04</span></div>
       <h3>Media Order</h3>
       <p>More useful sorting, organization and upload workflows for the Media Library.</p>
       <div class="umbfy-tags"><span>Sorting</span><span>Metadata</span><span>Upload folders</span></div>
+      <span class="umbfy-link">View documentation <b>→</b></span>
+    </a>
+
+    <a class="umbfy-package-card" href="environment-manager/">
+      <div class="umbfy-package-card__top">
+        <span class="umbfy-package-number">05</span>
+        <span class="umbfy-badge">Release candidate</span>
+      </div>
+      <h3>Environment Manager</h3>
+      <p>Compare, plan, approve, promote and verify Umbraco schema between environments.</p>
+      <div class="umbfy-tags"><span>Compare</span><span>Promotion</span><span>Verification</span><span>Recovery</span></div>
       <span class="umbfy-link">View documentation <b>→</b></span>
     </a>
   </div>
