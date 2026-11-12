@@ -76,6 +76,17 @@ nav:
       - Installation: getting-started/installation.md
       - Supported Umbraco Versions: getting-started/supported-umbraco-versions.md
       - Troubleshooting: getting-started/troubleshooting.md
+  - Hub:
+      - Overview: hub/README.md
+      - Installation: hub/installation.md
+      - Quick Start: hub/quick-start.md
+      - Configuration: hub/configuration.md
+      - Dashboard: hub/dashboard.md
+      - Packages: hub/packages.md
+      - UMBFY Account: hub/account.md
+      - Support and Feedback: hub/support-and-feedback.md
+      - Troubleshooting: hub/troubleshooting.md
+      - FAQ: hub/faq.md
   - Content Guard:
       - Overview: content-guard/README.md
       - Installation: content-guard/installation.md
@@ -114,6 +125,22 @@ nav:
       - Upload Folders: media-order/upload-folders.md
       - Troubleshooting: media-order/troubleshooting.md
       - FAQ: media-order/faq.md
+  - Environment Manager:
+      - Overview: environment-manager/README.md
+      - Installation: environment-manager/installation.md
+      - Quick Start: environment-manager/quick-start.md
+      - Configuration: environment-manager/configuration.md
+      - Environments: environment-manager/environments.md
+      - Compare and Drift: environment-manager/compare-and-drift.md
+      - Promotion: environment-manager/promotion.md
+      - Verification: environment-manager/verification.md
+      - Recovery: environment-manager/recovery.md
+      - Bootstrap: environment-manager/bootstrap.md
+      - Deployments: environment-manager/deployments.md
+      - Editions and Licensing: environment-manager/editions-and-licensing.md
+      - Security: environment-manager/security.md
+      - Troubleshooting: environment-manager/troubleshooting.md
+      - FAQ: environment-manager/faq.md
   - Support:
       - Reporting Issues: shared/reporting-issues.md
       - Diagnostics: shared/diagnostics.md
