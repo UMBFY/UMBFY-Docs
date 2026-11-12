@@ -1,120 +1,181 @@
-# UMBFY Media Order
+<section class="umbfy-product-hero">
+  <span class="umbfy-product-hero__eyebrow">UMBFY PACKAGE · MEDIA PRODUCTIVITY</span>
+  <h1>Media Order</h1>
+  <p>Turns the native Umbraco Media library into something you can work in at scale: real sorting and filtering, smart collections, duplicate detection, bulk operations, folder upload, controlled file replacement and library insights.</p>
+  <div class="umbfy-product-meta">
+    <span>Umbraco 17</span>
+    <span>Umbraco 18</span>
+    <span>Version 2.0</span>
+    <span>Native Media preserved</span>
+  </div>
+  <div class="umbfy-actions">
+    <a class="umbfy-btn umbfy-btn--primary" href="installation/">Install Media Order</a>
+    <a class="umbfy-btn umbfy-btn--ghost" href="quick-start/">Quick start</a>
+  </div>
+</section>
 
-Improve Umbraco Media-library sorting and upload workflows without replacing the native Media experience.
+It **adds to** the Media section. It does not replace Umbraco's Media tree, its upload pipeline, or its permissions
+model — and a media item created by Media Order is an ordinary Umbraco media item.
 
-UMBFY Media Order extends the native Umbraco Media collection with practical server-side sorting options and predictable post-upload ordering so editors can find recently uploaded assets quickly.
+## Start here
 
-## Who it is for
+<div class="umbfy-doc-grid">
+  <a class="umbfy-doc-card" href="installation/">
+    <strong>Installation</strong>
+    <span>Install, migrate, and let the metadata index warm up.</span>
+  </a>
+  <a class="umbfy-doc-card" href="quick-start/">
+    <strong>Quick Start</strong>
+    <span>Find the three views, run a real filter, import a folder.</span>
+  </a>
+  <a class="umbfy-doc-card" href="configuration/">
+    <strong>Configuration</strong>
+    <span>All 21 options, their defaults, and which ones you would actually change.</span>
+  </a>
+  <a class="umbfy-doc-card" href="troubleshooting/">
+    <strong>Troubleshooting</strong>
+    <span>Filters that seem to do nothing, stalled imports, index that looks short.</span>
+  </a>
+</div>
 
-- Editors managing large Media libraries
-- Agencies that want a better native Media workflow without replacing Umbraco Media
-- Teams that need consistent newest-first behavior after uploads
-- Sites where file-size sorting is useful for operational cleanup and asset management
+## Browse, Collections and Insights
 
-## Supported versions
+Media Order adds three places to the **Media** section, and knowing which does what saves the single most common
+piece of confusion:
 
-- Umbraco CMS 17.x
-- Umbraco CMS 18.x
-- NuGet dependency range: `[17.0.0,19.0.0)`
+| Where | What |
+| --- | --- |
+| **Media → Browse** | Umbraco's own library, plus the Media Order toolbar: search, sort, filter chips, **Import folder** |
+| **Media → Collections** | Smart collections, your saved searches, grid or table view, and bulk actions. **Advanced filters run here** |
+| **Media → Insights** | Index health and **Rebuild index**, totals, type breakdown, largest files, duplicate groups, CSV export |
 
-## Installation
+!!! tip "Browse vs Collections"
+    Browse is Umbraco's native list with a toolbar on top. The **advanced filters apply in Collections**. If you
+    build a filter in Browse, use **Apply in Collections** to carry it over. Knowing this up front saves a support
+    ticket.
+
+Two more entries live on context menus: **Replace file…** on a media item, and **Import folder…** on the Media root
+or any folder.
+
+## Core features
+
+### Sorting and filtering
+
+Sort by name, upload date, last modified, file size, width, height, resolution, extension, media type, or manually.
+Filter server-side with pagination by type, extension, size, date, dimension ranges, aspect ratio, duplicates,
+missing metadata and favourites.
+
+Default sort stays **Upload Date descending**, so a fresh upload appears at the top rather than buried in whatever
+sort you were last using.
+
+[Read the Sorting and Filtering guide &rarr;](sorting.md)
+
+### Collections and favourites
+
+Virtual smart collections — recently uploaded, large files, duplicates, missing metadata, needs attention — plus
+per-user saved searches and per-user favourites.
+
+[Read the Collections guide &rarr;](collections.md)
+
+### Duplicate detection
+
+A streaming SHA-256 index groups byte-identical files. **Nothing is ever auto-deleted**; you get the groups and
+decide.
+
+[Read the Duplicates guide &rarr;](duplicates.md)
+
+### Bulk operations
+
+Rename with a preview before you commit, move, and add or remove favourites — with per-item authorization, so a
+bulk action cannot do what the user could not do one at a time.
+
+[Read the Bulk Operations guide &rarr;](bulk-operations.md)
+
+### Folder import
+
+Upload a whole folder with its hierarchy intact: conflict handling, a preview tree, live progress, cancel,
+retry-failed and a CSV report. **Nothing is ever overwritten.**
+
+[Read the Folder Import guide &rarr;](upload-folders.md)
+
+### Replace file
+
+Swap the file behind a media item while keeping the item — so every reference to it survives. URLs and crops can
+still change, and the dialog says so before you commit.
+
+[Read the Replace File guide &rarr;](replace-file.md)
+
+### Smart Media Picker
+
+A property editor that lets editors pick existing media, upload files, upload a folder or drag and drop — without
+leaving the page they are editing. It stores **native Media Picker values**, so Razor, the Delivery API, crops and
+focal points keep working, and you can swap back to the stock picker without migrating data.
+
+[Read the Smart Media Picker guide &rarr;](smart-media-picker.md)
+
+### Insights
+
+Index health and rebuild, totals, type breakdown, largest files, missing metadata, duplicate groups and a CSV
+report.
+
+[Read the Insights guide &rarr;](insights.md)
+
+## Content Guard integration is optional
+
+With [Content Guard](../content-guard/README.md) installed, Media Order can answer "which media is potentially
+unused?".
+
+Without it, that query **returns empty rather than inventing usage**. The package works perfectly well on its own;
+it simply does not guess at something it cannot know.
+
+## Install
 
 ```bash
 dotnet add package UMBFY.Umbraco.MediaOrder
 ```
 
-Consumers do not need Node.js.
+No Node.js required. Restart so the migration can create its `umbfyMediaOrder*` tables — SQL Server and SQLite are
+both supported. See [Installation](installation.md).
 
-See [Installation](installation.md) and [Quick Start](quick-start.md).
+## Permissions
 
-## Core features
+Everything requires **Media** section access. Editors restricted to a media start node see only their own folders,
+and their totals are **labelled as scoped** rather than presented as site-wide. **Rebuild index** additionally
+requires unrestricted media access, because it re-reads the whole library. CSV exports never include storage paths
+and only contain items the user may see.
 
-### Upload Date sorting
+[Read the Permissions guide &rarr;](permissions.md)
 
-Sort Media by creation/upload date. The default behavior is newest first, making recent uploads immediately visible.
+## Known limitations
 
-### Name sorting
+- It does not replace the native Media tree, upload pipeline or permissions model.
+- **Advanced filters run in Collections**, not Browse.
+- Large folder imports want **SQL Server**. On SQLite, Umbraco's own cache sync can stall under sustained media
+  creation.
+- Folder import resolves name conflicts **when it plans**. Items created by somebody else mid-import are not
+  re-checked — though nothing is ever overwritten.
+- Duplicate detection is **binary** (SHA-256). Perceptual similarity is an extension point only, not a feature.
+- Insights totals are **logical indexed sizes**, not guaranteed physical disk usage.
+- The Smart Media Picker uses a package modal override on the same alias. Preserve selection values and re-validate
+  after an Umbraco upgrade.
+- Multi-server hashing coordination relies on shared package rows, so it needs a **shared database**.
 
-Sort Media alphabetically by name in ascending or descending order.
+## Documentation map
 
-### File Size sorting
-
-Sort Media by `umbracoBytes` so larger or smaller assets can be surfaced quickly.
-
-### Post-upload behavior
-
-After an upload, the Media listing returns to Upload Date descending so newly uploaded items appear first instead of being hidden elsewhere in the current sort order.
-
-### Remembered editor preference
-
-The package can remember a user's selected sort field and direction in namespaced local storage.
-
-### Native collection integration
-
-Sorting applies to the native `Umb.Collection.Media` experience and uses server-side collection ordering rather than replacing the entire Media library UI.
-
-## Default sort fields
-
-| Display name | Field | Default direction |
-| --- | --- | --- |
-| Name | `name` | Ascending |
-| Upload Date | `createDate` | Descending |
-| File Size | `umbracoBytes` | Descending |
-
-Changing sort resets pagination to the first page.
-
-## Configuration
-
-```json
-{
-  "UMBFY": {
-    "MediaOrder": {
-      "DefaultSortField": "createDate",
-      "DefaultSortDirection": "desc",
-      "RememberUserChoice": true,
-      "MaxPageSize": 100
-    }
-  }
-}
-```
-
-| Setting | Default | Purpose |
-| --- | --- | --- |
-| `DefaultSortField` | `createDate` | Initial sort field |
-| `DefaultSortDirection` | `desc` | Initial sort direction |
-| `RememberUserChoice` | `true` | Persist the editor's preference |
-| `MaxPageSize` | `100` | Upper bound for package server-side paging behavior |
-
-See [Configuration](configuration.md).
-
-## Known scope
-
-- Sorting targets the native Umbraco Media collection.
-- Upload Date and File Size are enabled through package integration rather than by permanently mutating Umbraco Media list-view configuration.
-- The package should preserve the surrounding native Backoffice workflow wherever possible.
-
-## Documentation
-
-### Start here
-
-- [Installation](installation.md)
-- [Quick Start](quick-start.md)
-- [Configuration](configuration.md)
-
-### Feature guides
-
-- [Sorting](sorting.md)
-- [Upload Folders](upload-folders.md)
-
-### Help
-
-- [Troubleshooting](troubleshooting.md)
-- [FAQ](faq.md)
-
-## Documentation status
-
-The Media Order guide should include real Backoffice screenshots for list and grid views, each sort mode, direction changes, post-upload behavior, and upload-folder behavior. Examples should use a stable demo Media library so screenshots remain comparable between releases.
+<div class="umbfy-doc-grid">
+  <a class="umbfy-doc-card" href="sorting/"><strong>Sorting and Filtering</strong><span>Every sort field and filter, and where each applies.</span></a>
+  <a class="umbfy-doc-card" href="collections/"><strong>Collections</strong><span>Smart collections, saved searches and favourites.</span></a>
+  <a class="umbfy-doc-card" href="duplicates/"><strong>Duplicates</strong><span>SHA-256 groups, and why nothing is deleted for you.</span></a>
+  <a class="umbfy-doc-card" href="bulk-operations/"><strong>Bulk Operations</strong><span>Rename preview, move and favourites with per-item auth.</span></a>
+  <a class="umbfy-doc-card" href="upload-folders/"><strong>Folder Import</strong><span>Whole-folder upload with conflict handling and a report.</span></a>
+  <a class="umbfy-doc-card" href="replace-file/"><strong>Replace File</strong><span>Swap the file, keep the item and its references.</span></a>
+  <a class="umbfy-doc-card" href="smart-media-picker/"><strong>Smart Media Picker</strong><span>Upload from the content editor, native values preserved.</span></a>
+  <a class="umbfy-doc-card" href="insights/"><strong>Insights</strong><span>Index health, metrics, largest files, CSV export.</span></a>
+  <a class="umbfy-doc-card" href="permissions/"><strong>Permissions</strong><span>Start nodes, scoped totals and what exports contain.</span></a>
+</div>
 
 ## Support
 
-Use the UMBFY Packages issue forms for bugs, compatibility reports, feature requests, and support. Never include credentials, connection strings, API keys, license keys, or other secrets in public issues.
+Use the [UMBFY Packages issue forms](https://github.com/UMBFY/UMBFY-Packages/issues). Include the package version,
+your Umbraco version and your database provider — SQL Server or SQLite matters for import questions. Never include
+credentials, connection strings or licence keys in a public issue.
