@@ -92,6 +92,7 @@ nav:
       - Installation: content-guard/installation.md
       - Quick Start: content-guard/quick-start.md
       - Configuration: content-guard/configuration.md
+      - Editions: content-guard/editions.md
       - Where Used: content-guard/where-used.md
       - Safe Delete: content-guard/safe-delete.md
       - Publish Guard: content-guard/publish-guard.md
