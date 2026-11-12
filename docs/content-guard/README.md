@@ -85,6 +85,20 @@ Shows inbound and outbound relationships, bounded dependency depth, and risk cla
 
 [Read the Impact guide →](impact.md)
 
+## Editions
+
+| Edition | What you get |
+| --- | --- |
+| **Free** | Where Used, and Safe Delete in `Warn` mode |
+| **Professional** | + Safe Delete `RequireConfirmation` / `Block`, Publish Guard, Content Health, Impact |
+| **Agency** | + multilingual validation, custom reference providers, reporting |
+
+Licensing **downgrades, it never blocks**. On a Free installation a configured `Block` policy behaves as `Warn` and
+Publish Guard stands down, so deleting and publishing keep working — a site is never held hostage to a licence.
+Index rebuild is never licence-gated, because Where Used is free and cannot work without the index.
+
+[Read the Editions guide →](editions.md)
+
 ## Supported reference types
 
 - Content Picker
@@ -125,6 +139,8 @@ See [Rebuild Index](rebuild-index.md) and [Troubleshooting](troubleshooting.md).
   <a class="umbfy-doc-card" href="content-health/"><strong>Content Health</strong><span>Review dependency health and index status centrally.</span></a>
   <a class="umbfy-doc-card" href="multilingual-validation/"><strong>Multilingual Validation</strong><span>Validate culture-aware references and language fallback behaviour.</span></a>
   <a class="umbfy-doc-card" href="impact/"><strong>Impact Analysis</strong><span>Understand inbound and outbound dependency impact before a change.</span></a>
+  <a class="umbfy-doc-card" href="editions/"><strong>Editions</strong><span>What Free, Professional and Agency include, and why licensing downgrades.</span></a>
+  <a class="umbfy-doc-card" href="tutorials/"><strong>Tutorials</strong><span>Task-oriented walkthroughs for the workflows editors actually run.</span></a>
 </div>
 
 ## Screenshots and guided workflows
