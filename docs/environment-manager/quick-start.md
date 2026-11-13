@@ -8,7 +8,7 @@ granted to your user group. See [Installation](installation.md) and [Configurati
 
 ## 1. Confirm each site knows who it is
 
-On each site, open **Environment Manager → Dashboard** and confirm it reports the `LocalIdentity` and
+On each site, open **Environment Manager → Overview** and confirm it reports the `LocalIdentity` and
 `LocalEnvironmentType` you configured. A site that reports the wrong identity will be targeted wrongly later.
 
 ## 2. Register the peer

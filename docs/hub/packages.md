@@ -22,6 +22,10 @@ tells you something needs attention.
 
 Packages with problems sort to the top, so the first card is always the one worth reading.
 
+## Screenshots
+
+![The Packages view, one card per installed UMBFY package with status, version, update and licence state](../assets/hub/packages.png)
+
 ## Step-by-step: confirm a package installed correctly
 
 1. Open **UMBFY → Packages**.

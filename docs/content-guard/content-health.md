@@ -31,6 +31,10 @@ This is the most important thing on the page, because every other Content Guard 
 On a large site the first build takes a few minutes. That is expected, and you do not need to re-save anything —
 see [Installation](installation.md).
 
+## Screenshots
+
+![The Content Health dashboard showing the dependency-index state and site-wide dependency metrics](../assets/content-guard/content-health.png)
+
 ## Step-by-step
 
 1. Open the **Content Health** dashboard.

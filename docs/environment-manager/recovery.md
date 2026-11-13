@@ -4,7 +4,7 @@
 
 **When to use it.** After a failed execution, or after [verification](verification.md) reports a mismatch.
 
-**Where to find it.** The deployment record for the run, under **Environment Manager → Deployments**.
+**Where to find it.** The deployment record for the run, under **Environment Manager → Activity**.
 
 **Edition.** Professional and above.
 

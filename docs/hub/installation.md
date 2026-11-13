@@ -48,6 +48,10 @@ Hub registers its section and its package registry during startup. There is no c
 Administrators usually hold all sections already. Editor and writer groups normally do not, so grant it explicitly
 to any group that needs it.
 
+### What it looks like once granted
+
+![The Umbraco Backoffice section menu with the UMBFY section present](../assets/shared/backoffice-sections.png)
+
 ## 4. Verify the installation
 
 1. Reload the Backoffice and confirm the **UMBFY** section appears.

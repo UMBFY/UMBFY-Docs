@@ -11,6 +11,10 @@ changes.
 
 **Edition.** Free — registering environments and running connection diagnostics needs no licence.
 
+## Screenshots
+
+![The Environments tab listing configured environments with their type, health and snapshot state](../assets/environment-manager/environments.png)
+
 ## Environment types
 
 Each site declares its own type through `LocalEnvironmentType`:

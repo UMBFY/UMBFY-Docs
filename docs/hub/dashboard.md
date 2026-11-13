@@ -26,6 +26,13 @@ not the exact clock value.
 **Not checked** is not an error. It means no UMBFY account is connected, so Hub has had no opportunity to check
 anything. Free capabilities are unaffected. See [UMBFY Account](account.md).
 
+## Screenshots
+
+![The Hub dashboard: health, updates and account tiles, the Needs attention list, and the installed-packages table](../assets/hub/dashboard.png)
+
+Captured on Umbraco 18 with all six UMBFY packages installed and no UMBFY account connected, which is why the
+updates tile reads a dash and the account tile reads **Not connected**.
+
 ## Needs attention
 
 A single list of everything actionable, so you do not have to walk the whole section looking for problems. It

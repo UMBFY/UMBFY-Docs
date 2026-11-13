@@ -24,6 +24,10 @@ leaves a collection as soon as it no longer matches.
 
 Turn them off with `SmartCollectionsEnabled` if you do not want them.
 
+## Screenshots
+
+![Media → Collections: smart collections, saved searches and the advanced filter surface](../assets/media-order/collections.png)
+
 ## Saved searches
 
 Build a filter you want again and save it. Saved searches are **per user**, so your experiments do not change what

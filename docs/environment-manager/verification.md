@@ -5,7 +5,7 @@ what the plan said it would do.
 
 **When to use it.** After **every** execution. A promotion is not complete until it has verified.
 
-**Where to find it.** The deployment record for the run, under **Environment Manager → Deployments**.
+**Where to find it.** The deployment record for the run, under **Environment Manager → Activity**.
 
 **Edition.** Professional and above.
 
