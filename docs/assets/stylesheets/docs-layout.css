@@ -1,0 +1,295 @@
+/* ---------------------------------------------------------------------------
+   Reference-site layout.
+
+   The chrome gets out of the way: a persistent left tree, a measured content
+   column, a quiet right-hand "On this page", breadcrumbs above the title. The
+   UMBFY palette from brand.css is untouched - this file changes structure and
+   density, not identity.
+
+   The homepage and the product hero sections keep their own styling; the rules
+   here are scoped so they do not flatten those.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --umbfy-docs-measure: 46rem;      /* ~75-85 characters at this size */
+  --umbfy-sidebar-width: 15.5rem;
+  --umbfy-toc-width: 14rem;
+}
+
+/* ---- the three columns ---- */
+
+.md-grid {
+  max-width: 88rem;
+}
+
+.md-content__inner {
+  max-width: var(--umbfy-docs-measure);
+  margin-inline: 0;
+  padding-top: 1.75rem;
+  padding-bottom: 5rem;
+}
+
+/* The hero pages are full-bleed by design and must not be pinned to the
+   reading measure. */
+.md-content__inner:has(.umbfy-hero),
+.md-content__inner:has(.umbfy-product-hero) {
+  max-width: none;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: var(--umbfy-sidebar-width);
+  }
+
+  .md-sidebar--secondary {
+    width: var(--umbfy-toc-width);
+  }
+}
+
+/* ---- left navigation: a tree, not a menu ---- */
+
+.md-sidebar--primary {
+  border-right: 1px solid var(--umbfy-border);
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  scrollbar-width: thin;
+}
+
+/* Section labels read as labels, not as links. */
+.md-nav--primary .md-nav__title {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--umbfy-muted);
+  box-shadow: none;
+}
+
+.md-nav__item--section > .md-nav__link {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--umbfy-muted);
+  margin-top: 1.25rem;
+}
+
+.md-nav__link {
+  font-size: .8rem;
+  line-height: 1.5;
+  border-radius: 6px;
+  padding: .3rem .5rem;
+  margin-inline: -.5rem;
+  transition: background-color .12s ease, color .12s ease;
+}
+
+.md-nav__link:hover {
+  background: var(--umbfy-soft);
+}
+
+/* The current page is marked with a rule, the way a reference site does it,
+   rather than a filled pill. */
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link--active:hover {
+  position: relative;
+  font-weight: 600;
+  color: var(--umbfy-violet-strong);
+  background: transparent;
+}
+
+.md-nav__item .md-nav__link--active::before {
+  content: "";
+  position: absolute;
+  inset-block: .15rem;
+  inset-inline-start: -.9rem;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--umbfy-violet);
+}
+
+/* ---- breadcrumbs ---- */
+
+.md-path {
+  margin: 0 0 .4rem;
+  padding: 0;
+  font-size: .72rem;
+}
+
+.md-path__item {
+  color: var(--umbfy-muted);
+}
+
+.md-path__link {
+  color: var(--umbfy-muted);
+}
+
+.md-path__link:hover {
+  color: var(--umbfy-violet-strong);
+}
+
+/* ---- right-hand "On this page" ---- */
+
+.md-sidebar--secondary {
+  border-left: 1px solid var(--umbfy-border);
+}
+
+.md-nav--secondary .md-nav__title {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--umbfy-muted);
+  box-shadow: none;
+}
+
+.md-nav--secondary .md-nav__link {
+  font-size: .75rem;
+  padding-block: .2rem;
+}
+
+/* ---- content density ---- */
+
+.md-typeset {
+  font-size: .82rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1 {
+  font-size: 1.95rem;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  margin-bottom: .6rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.35rem;
+  letter-spacing: -.015em;
+  margin-top: 2.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--umbfy-border);
+}
+
+.md-typeset h3 {
+  font-size: 1.05rem;
+  margin-top: 1.8rem;
+}
+
+/* A hero supplies its own spacing and must not inherit the section rule. */
+.md-typeset .umbfy-hero + h2,
+.md-typeset .umbfy-product-hero + h2 {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* ---- flatter surfaces in the body copy ---- */
+
+.md-typeset table:not([class]) {
+  font-size: .76rem;
+  border: 1px solid var(--umbfy-border);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--umbfy-soft);
+  font-weight: 600;
+}
+
+.md-typeset .highlight > pre > code,
+.md-typeset pre > code {
+  border-radius: 8px;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+  border-width: 1px;
+  box-shadow: none;
+  font-size: .78rem;
+}
+
+.md-typeset img {
+  border: 1px solid var(--umbfy-border);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* ---- header: no tab bar beneath it any more ---- */
+
+.md-header {
+  box-shadow: 0 1px 0 rgba(16, 24, 40, .08);
+}
+
+/* ---- dark mode: keep the same structure, follow Material's palette ---- */
+
+[data-md-color-scheme="slate"] {
+  --umbfy-border: #2a2f3c;
+  --umbfy-soft: #1b1f2a;
+  --umbfy-muted: #98a2b3;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: var(--umbfy-soft);
+}
+
+/* ---- narrow screens ---- */
+
+@media screen and (max-width: 76.1875em) {
+  .md-content__inner {
+    max-width: none;
+    padding-top: 1.25rem;
+  }
+
+  .md-nav--primary .md-nav__title {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: .9rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Hero fixes.
+
+   Both of these are pre-existing and visible on main; they are fixed here
+   because this file loads last and can win on specificity without touching
+   the brand stylesheet's own cascade.
+   --------------------------------------------------------------------------- */
+
+/* brand.css sets `.md-typeset h1 { color: var(--umbfy-ink) }`, which has the
+   same specificity as extra.css's `.umbfy-hero h1 { color: white }` and loads
+   after it. The homepage headline therefore rendered near-black on the dark
+   hero - "Better tools for" was effectively invisible, with only the lilac
+   span readable. Raising specificity restores the intended colour. */
+.md-typeset .umbfy-hero h1 {
+  color: #fff;
+}
+
+.md-typeset .umbfy-hero h1 span {
+  color: #bfc3ff;
+}
+
+.md-typeset .umbfy-product-hero h1,
+.md-typeset .umbfy-product-hero p {
+  color: #fff;
+}
+
+/* The full-bleed band shifted left by `calc(50% - 50vw)` but kept its
+   container's width, so it ran past the right edge. Giving it the viewport
+   width as well makes the bleed symmetrical. */
+.umbfy-hero {
+  width: 100vw;
+  max-width: 100vw;
+}
+
+/* The hero sits flush under the header. Material gives .md-main__inner a
+   1.5rem top margin, and this file adds content padding, so the hero's own
+   negative margin no longer cancels both. Zero the padding on hero pages and
+   pull the band up by exactly the main margin. */
+.md-content__inner:has(.umbfy-hero) {
+  padding-top: 0;
+}
+
+.md-content__inner:has(.umbfy-hero) .umbfy-hero {
+  margin-top: -1.5rem;
+}
