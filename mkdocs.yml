@@ -28,10 +28,12 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   features:
+    # A persistent left-hand tree, the way a reference site reads: every package and
+    # every page in it visible at once, rather than a top tab bar that hides the
+    # sibling sections of whichever package you are in.
     - navigation.instant
+    - navigation.instant.progress
     - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
     - navigation.path
@@ -62,6 +64,7 @@ markdown_extensions:
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/brand.css
+  - assets/stylesheets/docs-layout.css
 
 extra:
   generator: false
