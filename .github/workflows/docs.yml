@@ -30,10 +30,17 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Org self-hosted runner; skip fork PRs on the persistent machine.
+    if: >
+      github.event_name != 'pull_request' ||
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: [self-hosted, Windows, umbfy-ci]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          clean: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -57,6 +64,7 @@ jobs:
         with:
           path: site
 
+  # GitHub Pages deploy stays on hosted runners (OIDC / Pages action support).
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment:
